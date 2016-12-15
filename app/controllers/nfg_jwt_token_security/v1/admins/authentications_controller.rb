@@ -17,7 +17,7 @@ module NfgJwtTokenSecurity::V1
         render(json: { errors: "Request must include an email param"}, status: 500) and return if params[:email].nil?
         render(json: { errors: "Admin could not be found"}, status: 404) and return unless @admin
 
-        respond_with  @admin, serializer: GivecorpsApi::V1::AdminSerializer, location: nil, status: @status
+        respond_with  @admin, serializer: NfgJwtTokenSecurity::V1::AdminSerializer, location: nil, status: @status
       end
 
 

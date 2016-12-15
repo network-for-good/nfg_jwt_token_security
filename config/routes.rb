@@ -1,3 +1,5 @@
 NfgJwtTokenSecurity::Engine.routes.draw do
-  resources :authentications, only: [:create]
+  namespace :v1 do
+    resources :authentications, only: [:create]
+  end
 end
